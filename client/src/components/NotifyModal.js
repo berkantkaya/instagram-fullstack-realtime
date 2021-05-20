@@ -33,8 +33,14 @@ const NotifyModal = () => {
             <div className="d-flex justify-content-between align-items-center px-3">
                 <h3>Notification</h3>
                 {
-                   notify.sound ? <i className="fas fa-bell text-danger" style={{fontSize:'1.2rem',cursor:'pointer'}} onClick={handleSound}/> : <i className="fas fa-bell-slash text-danger" style={{fontSize:'1.2rem',cursor:'pointer'}} onClick={handleSound}/>
+                   notify.sound ?<span class="material-icons" style={{fontSize:'1.2rem',cursor:'pointer'}} onClick={handleSound}>
+                   notifications
+                   </span> : <span class="material-icons" style={{fontSize:'1.2rem',cursor:'pointer'}} onClick={handleSound}>
+                   notifications_off
+</span>
                 }
+
+
             </div>
             <hr className="mt-0"/>
             {
