@@ -6,12 +6,18 @@ const LikeButton = ({isLike,handleLike,handleUnLike}) => {
     return (
         <>
           {
-             isLike ? <i  className="fas fa-heart" onClick={handleUnLike}
-             style={{color:'red',filter:theme ? 'invert(1)' : 'invert(0)'}}/> : 
-             <i className="far fa-heart" onClick={handleLike}/>
+             isLike ? <span className="material-icons" style={{color:'red',filter:theme ? 'invert(1)' : 'invert(0)'}} onClick={handleUnLike}>
+             favorite
+     </span> : 
+             <span className="material-icons" style={{color:'gray',filter:theme ? 'invert(1)' : 'invert(0)'}} onClick={handleLike}>
+             favorite
+</span>
+             
           }  
         </>
     )
 }
 
 export default LikeButton
+
+
