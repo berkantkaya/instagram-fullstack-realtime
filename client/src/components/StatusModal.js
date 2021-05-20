@@ -148,14 +148,14 @@ const [tracks,setTracks]=useState('')
                 <div className="input_images">
 
                {
-                   stream ?  <span class="material-icons" onClick={handleCapture}>
+                   stream ?  <span style={{fontSize:'22px',marginRight:'4px'}} class="material-icons" onClick={handleCapture}>
                    photo_camera
                    </span>: <>
-                       <span class="material-icons" onClick={handleStream}>
+                       <span class="material-icons" style={{fontSize:'22px',marginRight:'4px'}} onClick={handleStream}>
                           photo_camera
                         </span>
                 <div className="file_upload">
-                <span class="material-icons">
+                <span class="material-icons" style={{fontSize:'22px',marginRight:'4px'}}>
                   perm_media
                </span>
                  <input type="file" name="file" id="file"
