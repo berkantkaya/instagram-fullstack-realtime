@@ -1,0 +1,152 @@
+.header{
+    width: 100%;
+    min-height: 70px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0 0 10px #ddd;
+    background-color: #f8f9fa;
+    border:1px solid rgb(0,0,0,.125);
+}
+.header .navbar{
+    width: 100%;
+    height: 100%;
+}
+.header .logo{
+    font-size: 2rem;
+}
+ /*--------------*/
+
+ .header .menu li{
+     opacity: 0.5;
+ }
+ .header .menu li.active{
+     opacity: 1;
+ }
+
+ .header .menu .material_icons{
+     font-size: 30px;
+ }
+ .header .menu .dropdown-menu{
+     position: absolute;
+     left: inherit;
+     right: 0;
+ }
+
+.header .menu label{
+    cursor: pointer;
+}
+
+.header .menu .notify_length{
+   position: absolute;
+   top:34%;
+   left: 39%;
+   transform: translate(-50%,-50%);
+   color: white;
+   font-weight: bold; 
+   font-size: 10px; 
+}
+
+/*----------------*/
+.header .search_form{
+    position: relative;
+    margin-right: 7px;
+    margin-bottom: 9px;
+}
+.header .search_form #search{
+    background: #fafafa;
+    border: 1px solid #ddd;
+    min-width: 250px;
+    width: 100%;
+    outline: none;
+    text-indent: 5px;
+    border-radius: 3px;
+}
+.header .search_form .search_icon{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.header .search_form .search_icon .material-icons{
+  font-size: 14px;
+  transform: translateY(3px);
+}
+.header .search_form .close_search{
+    position: absolute;
+    top: 0;
+    right: 5px;
+    cursor: pointer;
+    font-weight: 900;
+    color: crimson;
+}
+
+.header .search_form .users{
+    position: absolute;
+    width: 100%;
+    min-width: 250px;
+    min-height: calc(50vh - 150px);
+    background-color: #fafafa;
+    overflow: auto;
+    margin-top: 3px;
+}
+.header .search_form .loading{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    transform: translateY(-50%);
+}
+
+
+
+/*-------RESPONSİVE--------*/
+
+@media (max-width:768px){
+    .header .menu{
+        position:absolute;
+        top:calc(100vh - 50px);
+        left: 0;
+        width: 100%;
+        height:50px;
+        box-shadow: 0 0 10px #ddd;
+        z-index: 2;
+        background-color: #f8f9fa;
+    border:1px solid rgb(0,0,0,.125);
+
+    }
+    .header .menu .navbar-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .header .menu .dropdown-menu{
+       
+        bottom: 100%;
+        top: auto;
+    }
+    .header .search_form{
+        width: 100%;
+    }
+    .header .logo{
+        margin: auto;
+        font-size: 1rem;
+    }
+    .header .logo h1{
+        font-size: 1.5rem;
+    }
+    .header .menu .notify_length{
+        position: absolute;
+        top:40%;
+        left: 39%;
+        transform: translate(-50%,-50%);
+        color: white;
+        font-weight: bold; 
+        font-size: 10px; 
+     }
+}

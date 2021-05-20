@@ -1,0 +1,35 @@
+.auth_page{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#ffffff;
+    font-size: 12px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color:black;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.auth_page form{
+    background-color: rgb(238, 240, 240);
+    max-width: 400px;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding:50px 25px;
+    
+
+}
+.auth_page input::placeholder{
+    font-size: 12px;
+}
+.auth_page form .pass{
+   position: relative;
+}
+.auth_page form .pass small{
+    position: absolute;
+    top:50%;
+    right: 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+ }
