@@ -6,8 +6,8 @@ const LikeButton = ({isLike,handleLike,handleUnLike}) => {
     return (
         <>
           {
-             isLike ? <i className="fas fa-heart text-danger" onClick={handleUnLike}
-             style={{filter:theme ? 'invert(1)' : 'invert(0)'}}/> : 
+             isLike ? <i  className="fas fa-heart" onClick={handleUnLike}
+             style={{color:'red',filter:theme ? 'invert(1)' : 'invert(0)'}}/> : 
              <i className="far fa-heart" onClick={handleLike}/>
           }  
         </>

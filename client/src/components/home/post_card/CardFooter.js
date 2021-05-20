@@ -59,7 +59,7 @@ const CardFooter = ({post}) => {
                      handleLike={handleLike}
                      handleUnLike={handleUnLike}/>
 
-                     <Link to={`/post/${post._id}`} className="text-dark">
+                     <Link to={`/post/${post._id}`} style={{color:'black'}} className="text-dark">
                      <i className="far fa-comment" />
                      </Link>
 
@@ -68,7 +68,7 @@ const CardFooter = ({post}) => {
                  </div>
                  {
                  
-                 saved ? <i className="fas fa-bookmark text-info" onClick={()=> dispatch(unSavePost({post,auth}))} /> : <i className="far fa-bookmark" onClick={()=> dispatch(savePost({post,auth}))}/>
+                 saved ? <i className="fas fa-bookmark text-info" style={{color:'black'}} onClick={()=> dispatch(unSavePost({post,auth}))} /> : <i className="far fa-bookmark" onClick={()=> dispatch(savePost({post,auth}))} />
                  }
 
                 
