@@ -59,19 +59,25 @@ const CardFooter = ({post}) => {
                      handleLike={handleLike}
                      handleUnLike={handleUnLike}/>
 
-                     <Link to={`/post/${post._id}`} style={{color:'black'}} className="text-dark">
-                     <i className="far fa-comment" />
+                     <Link to={`/post/${post._id}`} style={{color:'black'}} class="material-icons" >
+                          textsms
                      </Link>
 
-                     <i className="fas fa-paper-plane" onClick={()=>setIsShare(!isShare)}></i>
+
+                     <span class="material-icons" onClick={()=>setIsShare(!isShare)}>
+                           send
+                      </span>
 
                  </div>
                  {
                  
-                 saved ? <i className="fas fa-bookmark text-info" style={{color:'black'}} onClick={()=> dispatch(unSavePost({post,auth}))} /> : <i className="far fa-bookmark" onClick={()=> dispatch(savePost({post,auth}))} />
+                 saved ? <span class="material-icons" style={{color:'blue'}} onClick={()=> dispatch(unSavePost({post,auth}))}>
+                 bookmarks
+                 </span> :  <span class="material-icons" style={{color:'red'}} onClick={()=> dispatch(savePost({post,auth}))}>
+                        bookmarks
+                        </span>
                  }
 
-                
                 
             </div>
                
